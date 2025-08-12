@@ -38,4 +38,4 @@ AI-ML-Colab-Projects/
 
 ## 📌 Author
 **Mohamed Elmwafy**  
-💼 [LinkedIn](www.linkedin.com/in/mohamed-elmwafy-7aa742331) | 📧 your-email@example.com
+💼 [LinkedIn](www.linkedin.com/in/mohamed-elmwafy-7aa742331) | 📧 mohamedelmwafy605@gmail.com
