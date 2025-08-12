@@ -66,4 +66,3 @@ The best performing model was: SVC / RandomForest (based on accuracy and F1-scor
 Feature scaling was essential for SVC and KNN performance.
 
 RandomForest handled unscaled data well but performed slightly better after scaling.
-
