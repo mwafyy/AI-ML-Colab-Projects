@@ -1,4 +1,6 @@
 🩺 Diabetes Prediction Project
+
+
 📌 Project Overview
 The goal of this project is to predict whether a patient has diabetes based on diagnostic measurements.
 We used different classification models and tuned their hyperparameters to find the best performance.
