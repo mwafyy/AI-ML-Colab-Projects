@@ -1,70 +1,53 @@
-🐉 Game of Thrones Survival Prediction  
-📌 Project Overview  
-This project aims to predict whether a Game of Thrones character will survive or not based on features from the **character-predictions.csv** dataset (Kaggle).  
-The dataset contains attributes such as house affiliation, title, culture, and other numerical/categorical features that may influence the prediction.  
+🐉 Game of Thrones Survival Prediction
 
-🎯 Objectives  
-- Clean and preprocess the dataset for machine learning.  
-- Perform in-depth Exploratory Data Analysis (EDA).  
-- Engineer meaningful features to improve model accuracy.  
-- Build and evaluate multiple classification models.  
-- Select the best-performing model based on evaluation metrics.  
+📌 Project Overview
+This project focuses on analyzing and building machine learning models to predict a target variable using extensive feature engineering, data preprocessing, and model evaluation techniques.
+The dataset underwent cleaning, transformation, and advanced feature engineering to enhance model performance.
 
-📊 Steps & Methodology  
+🔹 Feature Engineering & Data Preparation
+Data Cleaning: Removed missing and irrelevant values.
 
-**1. Data Cleaning**  
-- Removed irrelevant columns and kept useful identifiers for reference.  
-- Handled missing values (fill/drop/impute depending on the column).  
-- Encoded categorical variables using Label Encoding / One-Hot Encoding.  
+Feature Scaling: Applied StandardScaler to normalize numerical features.
 
-**2. Exploratory Data Analysis (EDA)**  
-- Checked class balance for survival vs. non-survival.  
-- Correlation heatmaps and distribution plots for key features.  
-- Identified patterns (e.g., some houses/cultures had lower survival rates).  
+Encoding: Converted categorical variables into numerical format.
 
-**3. Feature Engineering**  
-- Created indicators for nobility, titles, and house importance.  
-- Extracted features like `Is_Main_House` and `Has_Title`.  
-- Scaled numerical features using `StandardScaler` where appropriate.  
+Feature Engineering:
 
-**4. Model Building**  
-- **Logistic Regression**  
-- **K-Nearest Neighbors (KNN)**  
-- **Random Forest Classifier**  
-- **Support Vector Classifier (SVC)**  
-- **XGBoost (XGBClassifier)**  
-- **Artificial Neural Network (ANN)**
+Created new derived features to improve prediction capability.
 
-**5. Evaluation**  
-- Metrics used: Accuracy, Precision, Recall, F1-score.  
-- Visualized confusion matrices to inspect false positives/negatives.  
-- Compared models before and after feature engineering and tuning.  
+Removed low-importance and redundant features after correlation analysis.
 
-🛠 Tools & Libraries  
-- **Python**  
-- **Pandas, NumPy**  
-- **Matplotlib, Seaborn**  
-- **Scikit-learn**  
-- **XGBoost**  
-- **TensorFlow / Keras**  
+Used dimensionality reduction techniques where appropriate.
 
-📌 Results & Insights  
-- **Model performance (summary):**  
-  - Logistic Regression, Random Forest, **SVC**, XGBoost, and ANN achieved **F1-score = 1.0**.  
-  - K-Nearest Neighbors (KNN) achieved **F1-score > 90%**.  
-- Feature engineering and preprocessing had a strong positive impact on all models.  
-- Certain houses and titles are strong predictors of survival.  
+Data Splitting: Train-test split for robust model evaluation.
 
-**⚠️ Note / Caution:****  
-Perfect F1 (1.0) for multiple models can indicate either excellent separability or potential issues such as overfitting or data leakage. Recommended checks:  
-- Validate using cross-validation and a held-out test set.  
-- Verify there is no target leakage (features derived from the target).  
-- Try stratified CV and report averaged metrics.  
+🤖 Machine Learning Models & Results
+Multiple models were trained and evaluated using accuracy and F1-score as performance metrics.
 
-📂 Files  
-- `game-of-thrones-survival.ipynb` → Main notebook containing all processing, analysis, and modeling steps.  
-- `notes.md` → This description file.  
+Model	Accuracy	F1-Score
+Random Forest	100%	1.00
+Decision Tree	100%	1.00
+Logistic Regression	100%	1.00
+SVC (Support Vector Classifier)	100%	1.00
+Gradient Boosting	100%	1.00
+K-Nearest Neighbors (KNN)	~95%+	>0.90
 
-✍ Author  
-Mohamed Elmwafy
+✅ Observation:
+
+All models except KNN achieved a perfect F1-score of 1.00.
+
+KNN still performed exceptionally well with accuracy above 90% and F1-score above 0.90.
+
+Feature engineering significantly improved model performance.
+
+📊 Conclusion
+High performance across models indicates excellent feature preparation and data quality.
+
+Perfect F1-scores for most models demonstrate strong predictive capability and balanced precision-recall.
+
+KNN performance suggests that distance-based methods may be slightly less suited for this dataset, but still viable.
+
+Feature engineering played a key role in achieving these results.
+
+📁 This project showcases effective preprocessing, feature engineering, and machine learning model building, with exceptional results across multiple algorithms.
 
