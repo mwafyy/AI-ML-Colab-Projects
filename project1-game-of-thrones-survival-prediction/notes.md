@@ -1,68 +1,70 @@
-# 🐉 Game of Thrones Survival Prediction
+🐉 Game of Thrones Survival Prediction  
+📌 Project Overview  
+This project aims to predict whether a Game of Thrones character will survive or not based on features from the **character-predictions.csv** dataset (Kaggle).  
+The dataset contains attributes such as house affiliation, title, culture, and other numerical/categorical features that may influence the prediction.  
 
-## 📌 Project Overview
-This project predicts whether a character from the TV series **Game of Thrones** will survive or not, based on various attributes from the `character-predictions.csv` dataset (Kaggle).  
-The dataset contains information about characters' house affiliations, titles, culture, and other features.
+🎯 Objectives  
+- Clean and preprocess the dataset for machine learning.  
+- Perform in-depth Exploratory Data Analysis (EDA).  
+- Engineer meaningful features to improve model accuracy.  
+- Build and evaluate multiple classification models.  
+- Select the best-performing model based on evaluation metrics.  
 
----
+📊 Steps & Methodology  
 
-## 🎯 Objectives
-- Clean and preprocess the dataset for machine learning.
-- Perform **Exploratory Data Analysis (EDA)** to understand the data.
-- Engineer new features that improve model performance.
-- Train and evaluate multiple classification models.
-- Compare results and select the best-performing model.
+**1. Data Cleaning**  
+- Removed irrelevant columns and kept useful identifiers for reference.  
+- Handled missing values (fill/drop/impute depending on the column).  
+- Encoded categorical variables using Label Encoding / One-Hot Encoding.  
 
----
+**2. Exploratory Data Analysis (EDA)**  
+- Checked class balance for survival vs. non-survival.  
+- Correlation heatmaps and distribution plots for key features.  
+- Identified patterns (e.g., some houses/cultures had lower survival rates).  
 
-## 📊 Steps & Methodology
-1. **Data Cleaning**  
-   - Handle missing values.  
-   - Remove irrelevant columns.  
-   - Encode categorical variables.
+**3. Feature Engineering**  
+- Created indicators for nobility, titles, and house importance.  
+- Extracted features like `Is_Main_House` and `Has_Title`.  
+- Scaled numerical features using `StandardScaler` where appropriate.  
 
-2. **Exploratory Data Analysis**  
-   - Correlation analysis.  
-   - Distribution plots and histograms.  
-   - Insights into survival patterns.
+**4. Model Building**  
+- **Logistic Regression**  
+- **K-Nearest Neighbors (KNN)**  
+- **Random Forest Classifier**  
+- **Support Vector Classifier (SVC)**  
+- **XGBoost (XGBClassifier)**  
+- **Artificial Neural Network (ANN)**
 
-3. **Feature Engineering**  
-   - Create new features based on domain knowledge.  
-   - Scale/normalize numerical features.
+**5. Evaluation**  
+- Metrics used: Accuracy, Precision, Recall, F1-score.  
+- Visualized confusion matrices to inspect false positives/negatives.  
+- Compared models before and after feature engineering and tuning.  
 
-4. **Model Building**  
-   - Logistic Regression  
-   - K-Nearest Neighbors (KNN)  
-   - Artificial Neural Networks (ANN)  
-   - Gradient Boosting Classifier  
-
-5. **Evaluation**  
-   - Accuracy, Precision, Recall, F1-score.  
-   - Confusion matrix visualization.
-
----
-
-## 🛠 Tools & Libraries
+🛠 Tools & Libraries  
 - **Python**  
-- **Pandas**, **NumPy**  
-- **Matplotlib**, **Seaborn**  
+- **Pandas, NumPy**  
+- **Matplotlib, Seaborn**  
 - **Scikit-learn**  
-- **TensorFlow / Keras**
+- **XGBoost**  
+- **TensorFlow / Keras**  
 
----
+📌 Results & Insights  
+- **Model performance (summary):**  
+  - Logistic Regression, Random Forest, **SVC**, XGBoost, and ANN achieved **F1-score = 1.0**.  
+  - K-Nearest Neighbors (KNN) achieved **F1-score > 90%**.  
+- Feature engineering and preprocessing had a strong positive impact on all models.  
+- Certain houses and titles are strong predictors of survival.  
 
-## 📌 Results & Insights
-- Certain houses had significantly lower survival rates.  
-- Title and culture were strong predictors of survival.  
-- ANN performed best after feature engineering and hyperparameter tuning.
+**⚠️ Note / Caution:****  
+Perfect F1 (1.0) for multiple models can indicate either excellent separability or potential issues such as overfitting or data leakage. Recommended checks:  
+- Validate using cross-validation and a held-out test set.  
+- Verify there is no target leakage (features derived from the target).  
+- Try stratified CV and report averaged metrics.  
 
----
+📂 Files  
+- `game-of-thrones-survival.ipynb` → Main notebook containing all processing, analysis, and modeling steps.  
+- `notes.md` → This description file.  
 
-## 📂 Files
-- `game-of-thrones-survival.ipynb` → Main notebook with all steps.  
-- `notes.md` → This description file.
+✍ Author  
+Mohamed Elmwafy
 
----
-
-## ✍ Author
-**Mohamed Elmwafy**
